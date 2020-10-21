@@ -15,14 +15,14 @@ def scrape():
     mars_dict ={}
 
     #Connect to url for Nasa Mars site
-    url_nasa = 'https://mars.nasa.gov/news'
-    browser.visit(url_nasa)
+    news_url = 'https://mars.nasa.gov/news'
+    browser.visit(news_url)
     #Create Beautiful Soup Object
     html = browser.html
-    nasa_news_soup = BeautifulSoup(html, 'html.parser')
+    news_soup = BeautifulSoup(html, 'html.parser')
     #Inspect and Retrieve News Title and Opener
-    news_title = nasa_news_soup.find_all('div', class_='content_title')[0].text
-    news_p = nasa_news_soup.find_all('div', class_='article_teaser_body')[0].text
+    news_title = news_soup.find_all('div', class_='content_title')[0].text
+    news_p = news_soup.find_all('div', class_='article_teaser_body')[1].text
 
     #Images of Mars to scrape
     jpl_url = 'https://www.jpl.nasa.gov'
