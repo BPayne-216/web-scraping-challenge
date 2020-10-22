@@ -3,14 +3,18 @@ Web Scraping Homework - Mission to Mars
 ![image of HW](https://github.com/BPayne-216/web-scraping-challenge/blob/master/Missions_to_Mars/templates/cover_mars.png)
 Intro to this project
 
-This project utilitizes python and 
+This project utilitizes python, beautiful soup, splinter, Flask, pymongo to scrape various space-related websites.  HTML and bootstrap were used to create and index of the scraped items: text, data table, pictures.
 
-The motivation of this project is to utilize database tables from SQLite format and in Python to analyze temperature and Weather Stations.  Queries were made to review smaller samples of the database tables and build smaller time series graphs. 
+The motivation of this project is to utilize various web scraping applications, store the scraped information, and then review it on a separate web (HTML) document.
 
-Build status: The first part saved the sqlite files and using SQLalchemy creating.  SqlAlchemy was used to bring and query the database within the python application.  Many of the queries were transferred to pandas dataframes.  Matplotlib was also used to create graphs.
+Build status: The first part of the project utilized Beautiful Soup within python to review the data to be pulled from the (4) websites below: 
+https://mars.nasa.gov/news
+https://www.jpl.nasa.gov
+http://space-facts.com/mars
+https://astrogeology.usgs.gov
 
 Technology/Framework (In order):  
-Python, Pandas, 
+Python, Beautiful Soup
 
 Features/Files:
 climate_starter.ipynb contains Step 1 and Step 2 of the Climate and Station analysis.
