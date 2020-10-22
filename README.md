@@ -8,9 +8,9 @@ This project utilitizes python, beautiful soup, splinter, Flask, pymongo to scra
 The motivation of this project is to utilize various web scraping applications, store the scraped information, and then review it on a separate web (HTML) document.
 
 Build status: The first part of the project utilized Beautiful Soup within python to review the data to be pulled from the (4) websites below: 
-https://mars.nasa.gov/news
-https://www.jpl.nasa.gov
-http://space-facts.com/mars
+https://mars.nasa.gov/news,
+https://www.jpl.nasa.gov,
+http://space-facts.com/mars,
 https://astrogeology.usgs.gov
 
 Technology/Framework (In order):  
