@@ -1,6 +1,6 @@
 # web-scraping-challenge
 Web Scraping Homework - Mission to Mars
-![image of HW](https://github.com/BPayne-216/web-scraping-challenge/blob/tree/master/Missions_to_Mars/templates/cover_mars.png)
+![image of HW](https://github.com/BPayne-216/web-scraping-challenge/blob/master/Missions_to_Mars/templates/cover_mars.png)
 Intro to this project
 
 This project utilitizes python and 
