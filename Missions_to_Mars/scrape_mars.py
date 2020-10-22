@@ -2,10 +2,11 @@
 from bs4 import BeautifulSoup
 from splinter import Browser
 import pymongo
+import os
 import pandas as pd
 import requests 
 
-def init_browser():
+def init_browser():   
     #Create path to chromedriver
     executable_path = {'executable_path': 'chromedriver.exe'}
     return Browser('chrome', **executable_path, headless=False)
@@ -15,14 +16,14 @@ def scrape():
     mars_dict ={}
 
     #Connect to url for Nasa Mars site
-    news_url = 'https://mars.nasa.gov/news'
-    browser.visit(news_url)
+    nasa_url = 'https://mars.nasa.gov/news'
+    browser.visit(nasa_url)
     #Create Beautiful Soup Object
     html = browser.html
     news_soup = BeautifulSoup(html, 'html.parser')
     #Inspect and Retrieve News Title and Opener
-    news_title = news_soup.find_all('div', class_='content_title')[0].text
-    news_p = news_soup.find_all('div', class_='article_teaser_body')[1].text
+    news_title = news_soup.find('div', class_="content_title").text
+    news_p = news_soup.find('div', class_="rollover_description_inner").text
 
     #Images of Mars to scrape
     jpl_url = 'https://www.jpl.nasa.gov'
@@ -32,7 +33,7 @@ def scrape():
     html = browser.html
     images_soup = BeautifulSoup('html.parser')
     #Retrieve image
-    image_path = images_soup.find_all('img')[3]["src"]
+    image_path = images_soup.find('img', class_="Thumb")["src"]
     featured_image_url = jpl_url + image_path
 
     #Mars Detail table to scrape
