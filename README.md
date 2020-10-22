@@ -14,10 +14,10 @@ http://space-facts.com/mars,
 https://astrogeology.usgs.gov
 
 Technology/Framework (In order):  
-Python, Beautiful Soup
+Python (pandas), chromedriver, Beautiful Soup, splinter, pymongo, Flask.  HTML, bootstrap.
 
 Features/Files:
-climate_starter.ipynb contains Step 1 and Step 2 of the Climate and Station analysis.
-Precipitation_Analysis_png and Station_Histogram.png are files that have the output for steps 1 and 2.
-QuickDBD.sql: this is the sql file used to create the SQL tables with appropriate primary and foreign key structure.
-app.py is the python file that contains the Flask code that accesses the hawaii.sqlite tables, used to create Routes for the Climate App.  This file contains JSON (jsonify) and ORM processes.
+mission_to_mars.ipynb is the initial python document that connects to the individual websites listed and aggregates the reviewed data (text, table, pictures) to be stored.  Lists and dictionaries were used.
+scrape_mars.py this file performs the scrape based on the initial jupyter notebook format and is linked to the app.py file.
+app.py this file uses Flask and pymongo to store the data and transform the /scrape function to be used in HTML format.
+index.html reviewed the information scraped in HTML format.
