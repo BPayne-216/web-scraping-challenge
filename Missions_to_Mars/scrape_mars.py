@@ -29,12 +29,13 @@ def scrape():
     jpl_url = 'https://www.jpl.nasa.gov'
     images_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(images_url)
+   
     #Create Beautiful Soup Object
-    html = browser.html
-    images_soup = BeautifulSoup('html.parser')
+    #html = browser.html
+    #images_soup = BeautifulSoup('html.parser')
     #Retrieve image
-    image_path = images_soup.find('img', class_="Thumb")["src"]
-    featured_image_url = jpl_url + image_path
+    #image_path = images_soup.find('a', class_='button fancybox')['data-fancybox-href']
+    #featured_image_url = jpl_url + image_path
 
     #Mars Detail table to scrape
     facts_url = 'https://space-facts.com/mars/'
@@ -79,7 +80,7 @@ def scrape():
     mars_dict = {
         "news_title": news_title,
         "news_p": news_p,
-        "featured_image_url": featured_image_url,
+        #"featured_image_url": featured_image_url,
         "fact_table": str(mars_html_table),
         "hemisphere_images": hemispheres_image_urls
     }
